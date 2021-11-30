@@ -45,6 +45,7 @@ export const CTAImageText = styled.p`
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
+  text-shadow: 2px 2px 4px #000000;
 
   @media (min-width: 768px) {
     font-size: 1rem;

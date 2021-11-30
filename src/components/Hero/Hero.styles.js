@@ -27,6 +27,7 @@ export const HeaderWrapper = styled.div`
     color: #fff;
     text-transform: none;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 
     @media screen and (min-width: 768px) {
       font-size: 4rem;

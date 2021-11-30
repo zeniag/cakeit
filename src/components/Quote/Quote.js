@@ -6,13 +6,12 @@ import QuoteImg from "../../images/quote.svg"
 const Quote = () => {
   const { quote } = useQuoteQuery()
   const quoteData = quote.ACF_HomePage
-  console.log(quote)
   return (
     <Wrapper>
       <Content>
         <img src={QuoteImg} alt="Quote" />
         <h6>{quoteData.citat1Text}</h6>
-        <h6>{quoteData.citat1Author}</h6>
+        <p>{quoteData.citat1Author}</p>
       </Content>
     </Wrapper>
   )
