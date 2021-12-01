@@ -32,7 +32,6 @@ const PageTemplate = ({ data }) => {
     dataContent.featuredImage.node.localFile.childImageSharp.gatsbyImageData
   const parent = dataContent.wpParent
   const child = dataContent.wpChildren
-  // console.log(parent)
   return (
     <Layout>
       {featuredImage && <PageHero img={pageHero} />}
