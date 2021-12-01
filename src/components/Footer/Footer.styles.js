@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const FooterWrapper = styled.footer`
   display: flex;
@@ -9,9 +9,12 @@ export const FooterWrapper = styled.footer`
   color: #fff;
   text-align: center;
   height: 200px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   p {
     margin: 0;
     padding: 0;
   }
-`;
+`

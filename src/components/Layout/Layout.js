@@ -11,12 +11,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyles />
-      <Hamburger handleOverlayMenu={handleOverlayMenu} />
-      <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
-      <Header />
-      <Primary>{children}</Primary>
-      <Footer />
+      <div style={{ position: "relative", minHeight: "100vh" }}>
+        <GlobalStyles />
+        <Hamburger handleOverlayMenu={handleOverlayMenu} />
+        <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
+        <Header />
+        <Primary>{children}</Primary>
+        <Footer />
+      </div>
     </>
   )
 }
