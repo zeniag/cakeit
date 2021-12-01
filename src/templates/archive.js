@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import ArchiveSidebar from "../components/ArchiveSidebar/ArchiveSidebar"
+import Pagination from "../components/Pagination/Pagination"
 
 import {
   ContentWrapper,
@@ -37,6 +38,31 @@ const archiveTemplate = ({
         />
         <ContentWrapper>
           <ArchiveSidebar catId={catId} categories={categories.edges} />
+          <PageContent>
+            <h1 dangerouslySetInnerHTML={{ __html: catName }} />
+            {allWpPost.edges.map(post => (
+              <article key={post.node.id} className="entry-content">
+                <Link to={`/blog${post.node.uri}`}>
+                  <StyledH2
+                    dangerouslySetInnerHTML={{ __html: post.node.title }}
+                  />
+                </Link>
+                <StyledDate
+                  dangerouslySetInnerHTML={{ __html: post.node.date }}
+                />
+                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                <StyledReadMore to={`/blog${post.node.uri}`}>
+                  Read More
+                </StyledReadMore>
+                <div className="dot-divider" />
+              </article>
+            ))}
+            <Pagination
+              catUri={catUri}
+              page={currentPage}
+              totalPages={numPages}
+            />
+          </PageContent>
         </ContentWrapper>
       </Wrapper>
     </Layout>

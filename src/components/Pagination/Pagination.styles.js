@@ -1,13 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
+  flex-direction: ${props => (props.isFirst ? "row-reverse" : "row")};
+  font-family: "Teko", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
 
-  .navBack {
-    font-family: 'Teko', Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
+  .back {
     color: #fff;
     position: relative;
     width: 120px;
@@ -16,6 +17,7 @@ export const Wrapper = styled.nav`
     background: #000;
     padding: 3px 10px 0 25px;
     margin-bottom: 30px;
+    text-align: center;
 
     :before {
       display: block;
@@ -24,7 +26,7 @@ export const Wrapper = styled.nav`
       top: 50%;
       margin: 0;
       border: solid;
-      content: '';
+      content: "";
       pointer-events: none;
       border-right-color: #000;
       border-width: 15px;
@@ -40,10 +42,7 @@ export const Wrapper = styled.nav`
     }
   }
 
-  .navForward {
-    font-family: 'Teko', Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
+  .forward {
     color: #fff;
     position: relative;
     width: 120px;
@@ -61,7 +60,7 @@ export const Wrapper = styled.nav`
       top: 50%;
       margin: 0;
       border: solid;
-      content: '';
+      content: "";
       pointer-events: none;
       border-left-color: #000;
       border-width: 15px;
@@ -76,4 +75,4 @@ export const Wrapper = styled.nav`
       border-left-color: #ee2562;
     }
   }
-`;
+`
